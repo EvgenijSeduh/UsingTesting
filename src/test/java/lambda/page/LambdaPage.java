@@ -37,5 +37,9 @@ public class LambdaPage extends BasePage {
         newTaskButton = driver.findElement(By.id("addbutton"));
     }
 
+    public List<WebElement> updateTasks(){
+        return driver.findElements(By.xpath("//li[@class = 'ng-scope']"));
+    }
+
 
 }

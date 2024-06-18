@@ -104,11 +104,15 @@ public class LambdaTest extends BaseTest {
         assertNotNull(lambdaPage.getNewTaskInput());
         lambdaPage.getNewTaskInput().click();
         lambdaPage.getNewTaskInput().sendKeys("New test task");
-        System.out.println(lambdaPage.getNewTaskInput().getText());
         assertNotNull(lambdaPage.getNewTaskButton());
         lambdaPage.getNewTaskButton().click();
-        lambdaPage.setTasks(driver.findElements(By.xpath("//li[@class='ng-scope']")));
+        lambdaPage.updateTasks();
         assertNotNull(lambdaPage.getTasks().get(5));
+    }
+
+    @Test
+    public void startInscriptionTitle(){
+        assertEquals(lambdaPage.getTitle().getText(),"5 of 5 remaining");
     }
 
 }
