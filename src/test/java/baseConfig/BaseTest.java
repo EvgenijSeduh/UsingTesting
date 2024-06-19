@@ -37,12 +37,13 @@ abstract public class BaseTest {
     public void quit(){
         try {
             logger.info("Quit the driver");
-            Thread.sleep(20_000);
+            //Thread.sleep(20_000);
             driver.quit();
         } catch (Exception e) {
             logger.error("Error quit driver setup", e);
             throw new RuntimeException(e);
         }
     }
+
 
 }

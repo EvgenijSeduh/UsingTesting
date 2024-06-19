@@ -1,5 +1,6 @@
 package baseConfig;
 
+import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,12 +22,28 @@ abstract public class BasePage {
 
     @Setter
     protected static WebDriver driver;
+    @Getter
     @Setter
-    protected static WebDriverWait wait;
+    private static WebDriverWait wait;
     private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     public BasePage() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    }
+    public void logAndClick(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        logger.info("Clicked on element: {}", element);
+    }
+    public void switchToNewWindow() {
+
+        String originalWindow = driver.getWindowHandle();
+
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!originalWindow.contentEquals(windowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
     }
 
 }
