@@ -7,9 +7,11 @@ import lambda.test.LambdaTest;
 import mosPolytech.page.MosPolytechPage;
 import mosPolytech.page.SchedulePage;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
+import java.time.LocalDate;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -71,6 +74,28 @@ public class MosPolytechTest extends BaseTest {
         assertNotNull(mosPolytechPage.getButtonSeeScheduleOnWebsite());
         mosPolytechPage.getButtonSeeScheduleOnWebsite().click();
         assertEquals(driver.getCurrentUrl(), "https://mospolytech.ru/obuchauschimsya/raspisaniya/");
+        mosPolytechPage.switchToNewWindow();
+
+        SchedulePage schedulePage = new SchedulePage();
+        System.out.println(driver.getCurrentUrl());
+        schedulePage.getGroupInput().sendKeys("221-361");
+        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("221-361"))));
+
+        schedulePage.setGroup221_361Href(driver.findElement(By.xpath("//div[contains(@class, 'found-groups')]/div[@id='221-361']")));
+        System.out.println(schedulePage.getGroup221_361Href().getTagName());
+        assertNotNull(schedulePage.getGroup221_361Href());
+        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(schedulePage.getGroup221_361Href()));
+        schedulePage.getGroup221_361Href().click();
+        schedulePage.setScheduleTodays(driver.findElement(By.xpath("//div[@class='schedule-day schedule-day_today']")));
+        assertNotNull(schedulePage.getScheduleTodays());
+        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(schedulePage.getScheduleTodays()));
+        assertNotNull(schedulePage.getScheduleTodays());
+
+        Allure.step("Verify current day is highlighted", () -> {
+            boolean isCurrentDayHighlighted = schedulePage.isCurrentDayHighlighted();
+            Assertions.assertTrue(isCurrentDayHighlighted, "Current day is not highlighted in the schedule");
+        });
+
     }
 
 }
