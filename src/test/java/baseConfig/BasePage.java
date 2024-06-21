@@ -3,6 +3,7 @@ package baseConfig;
 import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import lombok.Setter;
 import org.openqa.selenium.JavascriptExecutor;
@@ -44,6 +45,12 @@ abstract public class BasePage {
                 break;
             }
         }
+    }
+
+    public void moveToElementAndLog(WebElement element){
+        logger.info("move to element {}", element);
+        Actions action = new Actions(driver);
+        action.moveToElement(element);
     }
 
 }

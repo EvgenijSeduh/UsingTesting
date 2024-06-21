@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 3/5 test">
+    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 5/5 test but need change where make click on number groub">
+      <change afterPath="$PROJECT_DIR$/src/test/java/yandexMarket/page/YandexMarketPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/yandexMarket/test/YandexMarketTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +205,7 @@
       <workItem from="1718484581459" duration="29061000" />
       <workItem from="1718622047013" duration="11141000" />
       <workItem from="1718718256875" duration="3914000" />
-      <workItem from="1718802172615" duration="23883000" />
+      <workItem from="1718802172615" duration="30534000" />
     </task>
     <task id="LOCAL-00001" summary="1 task(lambda) 5/6 test (5 test remake)">
       <option name="closed" value="true" />
@@ -230,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718816771094</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 5/5 test but need change where make click on number groub">
+      <option name="closed" value="true" />
+      <created>1718892913970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718892913970</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +260,7 @@
     <MESSAGE value="1 task(lambda) 5/6 test (5 test remake)" />
     <MESSAGE value="2 task(MosPolytech) 1/5 test" />
     <MESSAGE value="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 3/5 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 3/5 test" />
+    <MESSAGE value="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 5/5 test but need change where make click on number groub" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 task(Lambda) 5/5 + add log when click&#10;2 task(MosPolytech) 5/5 test but need change where make click on number groub" />
   </component>
 </project>

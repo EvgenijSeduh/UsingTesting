@@ -28,7 +28,7 @@ public class MosPolytechTest extends BaseTest {
     private MosPolytechPage mosPolytechPage;
     private Actions action;
     private SchedulePage schedulePage;
-    private static final Logger logger = LoggerFactory.getLogger(LambdaTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(MosPolytechTest.class);
 
     @BeforeEach
     public void setUpEach() {
