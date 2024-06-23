@@ -26,6 +26,7 @@ abstract public class BasePage {
     @Getter
     @Setter
     private static WebDriverWait wait;
+    @Getter
     private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     public BasePage() {
@@ -48,9 +49,8 @@ abstract public class BasePage {
     }
 
     public void moveToElementAndLog(WebElement element){
-        logger.info("move to element {}", element);
         Actions action = new Actions(driver);
-        action.moveToElement(element);
+        action.moveToElement(element).build().perform();
     }
 
 }
