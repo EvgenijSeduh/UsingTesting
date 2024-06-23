@@ -2,6 +2,7 @@ package baseConfig;
 
 import lombok.Getter;
 import lombok.Setter;
+import mosPolytech.page.MosPolytechPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,6 +33,7 @@ abstract public class BasePage {
     public BasePage() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }
+
     public void logAndClick(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         logger.info("Clicked on element: {}", element);
@@ -48,9 +50,13 @@ abstract public class BasePage {
         }
     }
 
-    public void moveToElementAndLog(WebElement element){
+    public void moveToElement(WebElement element){
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
+    }
+
+    public void waitToClickable(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }

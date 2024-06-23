@@ -16,30 +16,36 @@ import java.util.Locale;
 
 public class SchedulePage extends BasePage {
     @Getter
-    @FindBy(xpath = "*[@id='bx_3777608605_2854']/div[3]/div/div[1]/a")
+    @FindBy(xpath = "//a[@href='https://rasp.dmami.ru/session']")
     private WebElement buttonSeeScheduleOnWebsite;
 
     @Getter
     @FindBy(xpath = "/html/body/div/div[1]/div[1]/div[3]/input[1]")
-    private WebElement GroupInput;
+    private WebElement groupInput;
 
     @Getter
-    @Setter
-    private WebElement Group221_361Href;
+    @FindBy(xpath = "//div[contains(@class, 'found-groups')]/div[@id='221-361']")
+    private WebElement group221_361Href;
 
     @Getter
-    @Setter
-    WebElement ScheduleTodays;
+    @FindBy(xpath = "//div[@class='schedule-day schedule-day_today']")
+    WebElement scheduleToday;
 
     public SchedulePage() {
         PageFactory.initElements(driver, this);
     }
 
+    public void inputGroupInTextHolder(){
+        groupInput.sendKeys("221-361");
+        logAndClick(group221_361Href);
+    }
+
+
     public boolean isCurrentDayHighlighted() {
         DayOfWeek currentDay = LocalDate.now().getDayOfWeek();
         String currentDayName = currentDay.getDisplayName(TextStyle.FULL, new Locale("ru"));
         WebElement currentDayElement = driver.findElement(
-                By.xpath("//div[contains(@class, 'day') and contains(text(), '" + currentDayName + "') and contains(@class, 'highlighted')]"));
+                By.xpath("//div[@class='schedule-day schedule-day_today']"));
         return currentDayElement != null && currentDayElement.isDisplayed();
     }
 

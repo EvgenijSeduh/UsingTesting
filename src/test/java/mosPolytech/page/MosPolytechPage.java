@@ -20,13 +20,26 @@ public class MosPolytechPage extends BasePage {
     @Getter
     @FindBy(xpath = "/html/body/header/nav/div[2]/div/ul[1]/li[2]/a")
     WebElement buttonForStudents;
+
     @Getter
-    @Setter
+    @FindBy(xpath = "//a[@href='https://rasp.dmami.ru/session']")
     WebElement buttonSeeScheduleOnWebsite;
 
     public MosPolytechPage() {
         driver.get("https://mospolytech.ru/ ");
         PageFactory.initElements(driver,this);
+    }
+
+    public void openScheduleTab(){
+        logAndClick(buttonMenu);
+        waitToClickable(buttonForStudents);
+        moveToElement(buttonForStudents);
+        logAndClick(buttonSchedule);
+    }
+
+    public void openScheduleInNewWindow(){
+        moveToElement(buttonSeeScheduleOnWebsite);
+        logAndClick(buttonSeeScheduleOnWebsite);
     }
 //    //*[@id="bx_3777608605_2854"]/div[3]/div/div[1]/a
     //a[@title = "Обучающимся" ]

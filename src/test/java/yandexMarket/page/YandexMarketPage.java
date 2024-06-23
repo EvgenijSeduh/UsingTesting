@@ -48,13 +48,13 @@ public class YandexMarketPage extends BasePage {
 
     public void openHardDiskPartition(){
         getWait().until(ExpectedConditions.elementToBeClickable(buttonLaptopsAndComputers));
-        moveToElementAndLog(buttonLaptopsAndComputers);
+        moveToElement(buttonLaptopsAndComputers);
         getWait().until(ExpectedConditions.elementToBeClickable(buttonHardDisk));
         logAndClick(buttonHardDisk);
     }
 
     public void setSortDisc(){
-        moveToElementAndLog(buttonSortDisc);
+        moveToElement(buttonSortDisc);
         logAndClick(buttonSortDisc);
     }
 
@@ -67,7 +67,7 @@ public class YandexMarketPage extends BasePage {
     public void logProducts(int finish) {
         for (int i = 0; i < finish && i < resultSearchList.size(); i++) {
             WebElement product = resultSearchList.get(i);
-            moveToElementAndLog(product);
+            moveToElement(product);
             String title = product.findElement(By.xpath(".//h3")).getText();
             String price = product.findElement(By.xpath(".//span[@data-auto='snippet-price-current']/span[1]")).getText();
             BasePage.getLogger().info("Name: " + title + ". Price: " + price);
@@ -79,7 +79,7 @@ public class YandexMarketPage extends BasePage {
         Integer previousCost = null;
         for (int i = 0; i < finish && i < resultSearchList.size(); i++) {
             WebElement currentProduct = resultSearchList.get(i);
-            moveToElementAndLog(currentProduct);
+            moveToElement(currentProduct);
             Integer currentCost = Integer.parseInt(currentProduct.findElement(By
                     .xpath(".//span[@data-auto='snippet-price-current']/span[1]")).getText()
                     .replaceAll("[^\\d,]", "").replace(",", "."));

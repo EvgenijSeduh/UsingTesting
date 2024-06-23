@@ -2,6 +2,7 @@ package mosPolytech.test;
 
 import baseConfig.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import lambda.page.LambdaPage;
 import lambda.test.LambdaTest;
 import mosPolytech.page.MosPolytechPage;
@@ -37,64 +38,36 @@ public class MosPolytechTest extends BaseTest {
         });
     }
 
+    @Step("button Schedule Test")
     @Test
     public void buttonScheduleTest() throws InterruptedException {
         assertNotNull(mosPolytechPage.getButtonMenu());
         assertNotNull(mosPolytechPage.getButtonSchedule());
         assertNotNull(mosPolytechPage.getButtonForStudents());
-        action = new Actions(driver);
-        MosPolytechPage.getWait().until(ExpectedConditions.elementToBeClickable(mosPolytechPage.getButtonMenu()));
-        action
-                .moveToElement(mosPolytechPage.getButtonMenu())
-                .click()
-                .build()
-                .perform();
-        MosPolytechPage.getWait().until(ExpectedConditions.elementToBeClickable(mosPolytechPage.getButtonForStudents()));
-        action
-                .moveToElement(mosPolytechPage.getButtonForStudents())
-                .build()
-                .perform();
-        MosPolytechPage.getWait().until(ExpectedConditions.elementToBeClickable(mosPolytechPage.getButtonSchedule()));
-        action
-                .moveToElement(mosPolytechPage.getButtonSchedule())
-                .click()
-                .build()
-                .perform();
-        assertEquals(driver.getCurrentUrl(), "https://mospolytech.ru/obuchauschimsya/raspisaniya/");
+
+        mosPolytechPage.openScheduleTab();
+        logger.info("Go to a new tab " + driver.getCurrentUrl());
+
+        mosPolytechPage.openScheduleInNewWindow();
+        mosPolytechPage.switchToNewWindow();
+        assertEquals(driver.getCurrentUrl(),"https://rasp.dmami.ru/session");
+
+        logger.info("Go to a new window " + driver.getCurrentUrl());
+
+
     }
 
     @Test
     public void testStudentSchedule() throws InterruptedException {
         buttonScheduleTest();
-        mosPolytechPage.switchToNewWindow();
-        action = new Actions(driver);
-        mosPolytechPage.setButtonSeeScheduleOnWebsite(driver.findElement(By.xpath("//a[@href='https://rasp.dmami.ru/']")));
-        action.moveToElement(mosPolytechPage.getButtonSeeScheduleOnWebsite()).build().perform();
-        MosPolytechPage.getWait().until(ExpectedConditions.elementToBeClickable(mosPolytechPage.getButtonSeeScheduleOnWebsite()));
-        assertNotNull(mosPolytechPage.getButtonSeeScheduleOnWebsite());
-        mosPolytechPage.getButtonSeeScheduleOnWebsite().click();
-        assertEquals(driver.getCurrentUrl(), "https://mospolytech.ru/obuchauschimsya/raspisaniya/");
-        mosPolytechPage.switchToNewWindow();
+
+
 
         SchedulePage schedulePage = new SchedulePage();
-        System.out.println(driver.getCurrentUrl());
-        schedulePage.getGroupInput().sendKeys("221-361");
-        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("221-361"))));
+        schedulePage.inputGroupInTextHolder();
 
-        schedulePage.setGroup221_361Href(driver.findElement(By.xpath("//div[contains(@class, 'found-groups')]/div[@id='221-361']")));
-        System.out.println(schedulePage.getGroup221_361Href().getTagName());
-        assertNotNull(schedulePage.getGroup221_361Href());
-        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(schedulePage.getGroup221_361Href()));
-        schedulePage.getGroup221_361Href().click();
-        schedulePage.setScheduleTodays(driver.findElement(By.xpath("//div[@class='schedule-day schedule-day_today']")));
-        assertNotNull(schedulePage.getScheduleTodays());
-        SchedulePage.getWait().until(ExpectedConditions.elementToBeClickable(schedulePage.getScheduleTodays()));
-        assertNotNull(schedulePage.getScheduleTodays());
 
-        Allure.step("Verify current day is highlighted", () -> {
-            boolean isCurrentDayHighlighted = schedulePage.isCurrentDayHighlighted();
-            Assertions.assertTrue(isCurrentDayHighlighted, "Current day is not highlighted in the schedule");
-        });
+        Assertions.assertTrue( schedulePage.isCurrentDayHighlighted(), "Current day is not highlighted in the schedule");
 
     }
 
