@@ -13,8 +13,7 @@ import java.util.List;
 
 public class LambdaPage extends BasePage {
     @Getter
-    @Setter
-    @FindBy(xpath = "//li[@class='ng-scope']")
+    //@FindBy(xpath = "//li[@class='ng-scope']")
     private List<WebElement> tasks;
 
     @Getter

@@ -1,11 +1,13 @@
 package museum.test;
 
 import baseConfig.BaseTest;
+import baseConfig.TestListener;
 import io.qameta.allure.Allure;
 import museum.page.MuseumPage;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
@@ -48,7 +50,7 @@ public class MuseumTest extends BaseTest {
     }
 
     @Test
-    public void test(){
+    public void fileReportTest(){
         museumPage.openAnnualReports();
         museumPage.openReport();
         museumPage.openLinkReport();

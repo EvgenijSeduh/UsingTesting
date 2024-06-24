@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-
+@ExtendWith(TestListener.class)
 abstract public class BaseTest {
     public static WebDriver driver;
     protected static final Logger logger = LoggerFactory.getLogger(BaseTest.class);
@@ -38,7 +39,7 @@ abstract public class BaseTest {
         try {
             logger.info("Quit the driver");
             //Thread.sleep(10_000);
-            //driver.quit();
+            driver.quit();
         } catch (Exception e) {
             logger.error("Error quit driver setup", e);
             throw new RuntimeException(e);

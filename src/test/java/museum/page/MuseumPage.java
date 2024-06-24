@@ -1,6 +1,7 @@
 package museum.page;
 
 import baseConfig.BasePage;
+import io.qameta.allure.Step;
 import lombok.Getter;
 import museum.DataConvertor;
 import org.openqa.selenium.By;
@@ -79,31 +80,37 @@ public class MuseumPage extends BasePage {
 
     }
 
+    @Step("Open exhibition tab")
     public void openExhibition() {
         logAndClick(buttonForVisitors);
         logAndClick(buttonAllExhibition);
     }
 
+    @Step("Open tabs How To Reach Us")
     public void openHowToReachUs() {
         logAndClick(buttonForVisitors);
         logAndClick(buttonHowToReachUs);
     }
 
+    @Step("check mobile phone")
     public boolean checkTel(String nameAndNumber) {
         if(TextWithTel.getText().indexOf(nameAndNumber)==-1)
             return false;
         return true;
     }
 
+    @Step("open tab with all annual reports")
     public void openAnnualReports(){
         logAndClick(buttonAboutMuseum);
         logAndClick(buttonAnnualReports);
     }
 
+    @Step("open tab with annual report")
     public void openReport(){
         logAndClick(buttonReport);
     }
 
+    @Step("open link for annual report")
     public void openLinkReport(){
         logAndClick(linkOnDocument);
     }

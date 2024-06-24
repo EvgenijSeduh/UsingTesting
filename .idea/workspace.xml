@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="2 task Made it more suitable for patern PO">
-      <change afterPath="$PROJECT_DIR$/src/test/java/museum/DataConvertor.java" afterDir="false" />
+    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="All task done&#10;fixed xpath&#10;add some logg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" afterDir="false" />
@@ -63,6 +64,7 @@
     &quot;JUnit.Test1.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Test1.testGetUsers.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.YandexMarketTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.YandexMarketTest.sortHardDiskDescendingTest.executor&quot;: &quot;Run&quot;,
     &quot;Maven.UnitTesting [clean].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -81,7 +83,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MosPolytechTest">
+  <component name="RunManager" selected="JUnit.LambdaTest.countTaskTextTest">
     <configuration name="open brouser" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="individ.evgenij.Main" />
       <module name="UnitTesting" />
@@ -95,6 +97,22 @@
       <option name="MAIN_CLASS_NAME" value="lambda.test.LambdaTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LambdaTest.countTaskTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lambda.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lambda.test" />
+      <option name="MAIN_CLASS_NAME" value="lambda.test.LambdaTest" />
+      <option name="METHOD_NAME" value="countTaskTextTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,23 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MuseumTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UnitTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="museum.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="museum.test" />
-      <option name="MAIN_CLASS_NAME" value="museum.test.MuseumTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="YandexMarketTest.sortHardDiskDescendingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="YandexMarketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +173,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="yandexMarket.test" />
       <option name="MAIN_CLASS_NAME" value="yandexMarket.test.YandexMarketTest" />
-      <option name="METHOD_NAME" value="sortHardDiskDescendingTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,19 +181,19 @@
     <list>
       <item itemvalue="Application.open brouser" />
       <item itemvalue="JUnit.LambdaTest" />
+      <item itemvalue="JUnit.LambdaTest.countTaskTextTest" />
       <item itemvalue="JUnit.MosPolytechTest.buttonScheduleTest" />
-      <item itemvalue="JUnit.YandexMarketTest.sortHardDiskDescendingTest" />
+      <item itemvalue="JUnit.YandexMarketTest" />
       <item itemvalue="JUnit.MosPolytechTest" />
       <item itemvalue="JUnit.MuseumTest" />
-      <item itemvalue="JUnit.MuseumTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LambdaTest.countTaskTextTest" />
+        <item itemvalue="JUnit.YandexMarketTest" />
+        <item itemvalue="JUnit.MuseumTest" />
         <item itemvalue="JUnit.MosPolytechTest" />
         <item itemvalue="JUnit.MosPolytechTest.buttonScheduleTest" />
-        <item itemvalue="JUnit.YandexMarketTest.sortHardDiskDescendingTest" />
-        <item itemvalue="JUnit.MuseumTest.test" />
-        <item itemvalue="JUnit.MuseumTest" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +220,8 @@
       <workItem from="1718802172615" duration="31217000" />
       <workItem from="1719143098197" duration="39095000" />
       <workItem from="1719190293123" duration="9058000" />
-      <workItem from="1719200345310" duration="7494000" />
+      <workItem from="1719200345310" duration="10993000" />
+      <workItem from="1719216487279" duration="2540000" />
     </task>
     <task id="LOCAL-00001" summary="1 task(lambda) 5/6 test (5 test remake)">
       <option name="closed" value="true" />
@@ -277,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719178690565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="All task done&#10;fixed xpath&#10;add some logg">
+      <option name="closed" value="true" />
+      <created>1719212495504</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719212495504</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +312,7 @@
     <MESSAGE value="3 task provisionPage+provisionTest&#10;BasePage add method move to element and log" />
     <MESSAGE value="3 task 4/4 + log" />
     <MESSAGE value="2 task Made it more suitable for patern PO" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 task Made it more suitable for patern PO" />
+    <MESSAGE value="All task done&#10;fixed xpath&#10;add some logg" />
+    <option name="LAST_COMMIT_MESSAGE" value="All task done&#10;fixed xpath&#10;add some logg" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package yandexMarket.test;
 
 import baseConfig.BaseTest;
+import baseConfig.TestListener;
 import io.qameta.allure.Allure;
 import lambda.test.LambdaTest;
 import mosPolytech.page.MosPolytechPage;
@@ -8,6 +9,7 @@ import mosPolytech.page.SchedulePage;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
@@ -44,7 +46,7 @@ public class YandexMarketTest extends BaseTest {
         yandexMarketPage.logProducts(5);
 
         yandexMarketPage.setSortDisc();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         yandexMarketPage.updateResultSearch();
         assertTrue(yandexMarketPage.checkResultSortDisc(10));
     }

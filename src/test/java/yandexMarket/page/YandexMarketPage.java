@@ -1,6 +1,7 @@
 package yandexMarket.page;
 
 import baseConfig.BasePage;
+import io.qameta.allure.Step;
 import lombok.Getter;
 import mosPolytech.page.MosPolytechPage;
 import org.openqa.selenium.By;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class YandexMarketPage extends BasePage {
     @Getter
-    @FindBy(xpath = "//button[@class=\"_30-fz button-focus-ring Hkr1q _1pHod _2rdh3 _3rbM-\"]")
+    @FindBy(xpath = "//button[@class='_30-fz button-focus-ring Hkr1q _1pHod _2rdh3 _3rbM-']")
     private WebElement buttonCatalog;
 
     @Getter
@@ -46,6 +47,7 @@ public class YandexMarketPage extends BasePage {
         logAndClick(buttonCatalog);
     }
 
+    @Step("Open hard disk partition")
     public void openHardDiskPartition(){
         waitToClickable(buttonLaptopsAndComputers);
         moveToElement(buttonLaptopsAndComputers);
@@ -53,17 +55,20 @@ public class YandexMarketPage extends BasePage {
         logAndClick(buttonHardDisk);
     }
 
+    @Step("Sort in descending order")
     public void setSortDisc(){
         moveToElement(buttonSortDisc);
         logAndClick(buttonSortDisc);
     }
 
+    @Step("Update result search hard disc")
     public void updateResultSearch(){
         resultSearchList.clear();
         getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-auto-themename='listDetailed']")));
         resultSearchList = driver.findElements(By.xpath( "//div[@data-auto-themename='listDetailed']"));
     }
 
+    @Step("Displaying products in the console")
     public void logProducts(int finish) {
         for (int i = 0; i < finish && i < resultSearchList.size(); i++) {
             WebElement product = resultSearchList.get(i);
@@ -74,6 +79,7 @@ public class YandexMarketPage extends BasePage {
         }
     }
 
+    @Step("Checking the results of sorting in descending order")
     public boolean checkResultSortDisc(int finish) {
         updateResultSearch();
         Integer previousCost = null;
@@ -83,7 +89,6 @@ public class YandexMarketPage extends BasePage {
             Integer currentCost = Integer.parseInt(currentProduct.findElement(By
                     .xpath(".//span[@data-auto='snippet-price-current']/span[1]")).getText()
                     .replaceAll("[^\\d,]", "").replace(",", "."));
-            System.out.println(currentCost);
             if((previousCost == null)||(currentCost>=previousCost)){
                 previousCost = currentCost;
             }
@@ -92,9 +97,5 @@ public class YandexMarketPage extends BasePage {
         return true;
     }
 
-
-
-    //h3[@data-auto="snippet-title"]//name disk
-    //span[@class="_1ArMm"]// cell disc
 
 }

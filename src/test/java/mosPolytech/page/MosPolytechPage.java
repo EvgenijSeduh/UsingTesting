@@ -1,6 +1,7 @@
 package mosPolytech.page;
 
 import baseConfig.BasePage;
+import io.qameta.allure.Step;
 import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.By;
@@ -22,10 +23,12 @@ public class MosPolytechPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Open new tabs")
     public void openScheduleTab() {
         logAndClick(buttonSchedule);
     }
 
+    @Step("Open new window")
     public void openScheduleInNewWindow() {
         moveToElement(buttonSeeScheduleOnWebsite);
         logAndClick(buttonSeeScheduleOnWebsite);
