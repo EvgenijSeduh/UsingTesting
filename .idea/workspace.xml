@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="All task done&#10;fixed xpath&#10;add some logg">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/individ/evgenij/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/individ/evgenij/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" afterDir="false" />
@@ -32,6 +37,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="c99b537ddec78ffd9460fdaa2994384924de457c" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiProvider">{
@@ -46,44 +56,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DataConvertor.executor&quot;: &quot;Run&quot;,
-    &quot;Application.open brouser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.countTaskTextTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.createNewTaskTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.startInscriptionTitle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.task1Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MosPolytechTest.buttonScheduleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MosPolytechTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MosPolytechTest.testStudentSchedule.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MuseumTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MuseumTest.exhibitionsRelevant.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MuseumTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test1.testGetUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.YandexMarketTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.YandexMarketTest.sortHardDiskDescendingTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.UnitTesting [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DataConvertor.executor": "Run",
+    "Application.open brouser.executor": "Run",
+    "JUnit.LambdaTest.countTaskTextTest.executor": "Run",
+    "JUnit.LambdaTest.createNewTaskTest.executor": "Run",
+    "JUnit.LambdaTest.executor": "Run",
+    "JUnit.LambdaTest.startInscriptionTitle.executor": "Run",
+    "JUnit.LambdaTest.task1Test.executor": "Run",
+    "JUnit.MosPolytechTest.buttonScheduleTest.executor": "Run",
+    "JUnit.MosPolytechTest.executor": "Run",
+    "JUnit.MosPolytechTest.testStudentSchedule.executor": "Run",
+    "JUnit.MuseumTest.executor": "Run",
+    "JUnit.MuseumTest.exhibitionsRelevant.executor": "Run",
+    "JUnit.MuseumTest.test.executor": "Run",
+    "JUnit.Test1.executor": "Run",
+    "JUnit.Test1.testGetUsers.executor": "Run",
+    "JUnit.Unnamed.executor": "Run",
+    "JUnit.YandexMarketTest.executor": "Run",
+    "JUnit.YandexMarketTest.sortHardDiskDescendingTest.executor": "Run",
+    "Maven.UnitTesting [clean,test].executor": "Run",
+    "Maven.UnitTesting [clean].executor": "Run",
+    "Maven.UnitTesting [io.qameta.allure:allure-maven:2.10.0:report].executor": "Run",
+    "Maven.Unit_Testing [allure:install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.LambdaTest.countTaskTextTest">
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MuseumTest.fileReportTest">
     <configuration name="open brouser" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="individ.evgenij.Main" />
       <module name="UnitTesting" />
@@ -101,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LambdaTest.countTaskTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LambdaTest.task1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting" />
       <extension name="coverage">
         <pattern>
@@ -111,7 +129,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="lambda.test" />
       <option name="MAIN_CLASS_NAME" value="lambda.test.LambdaTest" />
-      <option name="METHOD_NAME" value="countTaskTextTest" />
+      <option name="METHOD_NAME" value="task1Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,22 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MosPolytechTest.buttonScheduleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UnitTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mosPolytech.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mosPolytech.test" />
-      <option name="MAIN_CLASS_NAME" value="mosPolytech.test.MosPolytechTest" />
-      <option name="METHOD_NAME" value="buttonScheduleTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MuseumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting" />
       <extension name="coverage">
@@ -159,6 +161,22 @@
       <option name="PACKAGE_NAME" value="museum.test" />
       <option name="MAIN_CLASS_NAME" value="museum.test.MuseumTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MuseumTest.fileReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="museum.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="museum.test" />
+      <option name="MAIN_CLASS_NAME" value="museum.test.MuseumTest" />
+      <option name="METHOD_NAME" value="fileReportTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,25 +199,26 @@
     <list>
       <item itemvalue="Application.open brouser" />
       <item itemvalue="JUnit.LambdaTest" />
-      <item itemvalue="JUnit.LambdaTest.countTaskTextTest" />
-      <item itemvalue="JUnit.MosPolytechTest.buttonScheduleTest" />
+      <item itemvalue="JUnit.LambdaTest.task1Test" />
+      <item itemvalue="JUnit.MuseumTest.fileReportTest" />
       <item itemvalue="JUnit.YandexMarketTest" />
       <item itemvalue="JUnit.MosPolytechTest" />
       <item itemvalue="JUnit.MuseumTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LambdaTest.countTaskTextTest" />
-        <item itemvalue="JUnit.YandexMarketTest" />
+        <item itemvalue="JUnit.MuseumTest.fileReportTest" />
+        <item itemvalue="JUnit.LambdaTest.task1Test" />
         <item itemvalue="JUnit.MuseumTest" />
         <item itemvalue="JUnit.MosPolytechTest" />
-        <item itemvalue="JUnit.MosPolytechTest.buttonScheduleTest" />
+        <item itemvalue="JUnit.YandexMarketTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>

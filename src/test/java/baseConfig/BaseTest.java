@@ -1,24 +1,19 @@
 package baseConfig;
 
+import lombok.Getter;
 import org.junit.After;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-@ExtendWith(TestListener.class)
 abstract public class BaseTest {
+    @Getter
     public static WebDriver driver;
     protected static final Logger logger = LoggerFactory.getLogger(BaseTest.class);
-    @BeforeEach
+    @Before
     public void setUp(){
         try {
             logger.info("Setting up the driver");
@@ -34,7 +29,7 @@ abstract public class BaseTest {
             throw new RuntimeException(e);
         }
     }
-    @AfterEach
+    @After
     public void quit(){
         try {
             logger.info("Quit the driver");

@@ -21,7 +21,6 @@ import java.time.Duration;
 
 
 abstract public class BasePage {
-
     @Setter
     protected static WebDriver driver;
     @Getter

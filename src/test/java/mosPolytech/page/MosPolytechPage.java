@@ -3,8 +3,7 @@ package mosPolytech.page;
 import baseConfig.BasePage;
 import io.qameta.allure.Step;
 import lombok.Getter;
-import lombok.Setter;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

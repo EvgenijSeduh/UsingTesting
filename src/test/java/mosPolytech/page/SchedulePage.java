@@ -2,7 +2,6 @@ package mosPolytech.page;
 
 import baseConfig.BasePage;
 import lombok.Getter;
-import lombok.Setter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
-import java.util.List;
 import java.util.Locale;
 
 public class SchedulePage extends BasePage {

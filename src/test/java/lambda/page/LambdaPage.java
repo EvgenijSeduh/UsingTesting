@@ -2,10 +2,8 @@ package lambda.page;
 
 import baseConfig.BasePage;
 import lombok.Getter;
-import lombok.Setter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,7 +11,7 @@ import java.util.List;
 
 public class LambdaPage extends BasePage {
     @Getter
-    //@FindBy(xpath = "//li[@class='ng-scope']")
+    @FindBy(xpath = "//li[@class='ng-scope']")
     private List<WebElement> tasks;
 
     @Getter

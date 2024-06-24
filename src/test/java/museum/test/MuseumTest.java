@@ -1,26 +1,22 @@
 package museum.test;
 
 import baseConfig.BaseTest;
-import baseConfig.TestListener;
 import io.qameta.allure.Allure;
 import museum.page.MuseumPage;
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import yandexMarket.page.YandexMarketPage;
-import yandexMarket.test.YandexMarketTest;
 
 public class MuseumTest extends BaseTest {
     private MuseumPage museumPage;
     private Actions action;
     private static final Logger logger = LoggerFactory.getLogger(MuseumTest.class);
 
-    @BeforeEach
+    @Before
     public void setUpEach() {
         Allure.step("Open museum site", () -> {
             museumPage = new MuseumPage();

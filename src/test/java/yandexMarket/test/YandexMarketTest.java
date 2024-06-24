@@ -1,16 +1,10 @@
 package yandexMarket.test;
 
 import baseConfig.BaseTest;
-import baseConfig.TestListener;
 import io.qameta.allure.Allure;
-import lambda.test.LambdaTest;
-import mosPolytech.page.MosPolytechPage;
-import mosPolytech.page.SchedulePage;
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.openqa.selenium.WebElement;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +18,7 @@ public class YandexMarketTest extends BaseTest {
     private Actions action;
     private static final Logger logger = LoggerFactory.getLogger(YandexMarketTest.class);
 
-    @BeforeEach
+    @Before
     public void setUpEach() {
         Allure.step("Open yandex market site", () -> {
             yandexMarketPage = new YandexMarketPage();

@@ -6,21 +6,19 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import lambda.ParseInt;
 import lambda.page.LambdaPage;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Assert;
+
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class LambdaTest extends BaseTest {
     private LambdaPage lambdaPage;
@@ -28,11 +26,12 @@ public class LambdaTest extends BaseTest {
 
     private int currentNumberActiveTasks;
 
-    @BeforeEach
+    @Before
     public void setUpEach() {
         Allure.step("Open LambdaTest sample app and initialize page", () -> {
             lambdaPage = new LambdaPage();
         });
+        assertNotNull(lambdaPage.getTasks());
         currentNumberActiveTasks = lambdaPage.getTasks().size();
     }
 
@@ -57,9 +56,10 @@ public class LambdaTest extends BaseTest {
     @Step("Test 1 task")
     public void task1Test() {
         assertNotNull(lambdaPage.getTasks().get(0));
-        Assertions.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        Assert.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        lambdaPage.waitToClickable(lambdaPage.getTasks().get(0).findElement(By.tagName("input")));
         lambdaPage.logAndClick(lambdaPage.getTasks().get(0).findElement(By.tagName("input")));
-        Assertions.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
+        Assert.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
 
         countTaskTextTest();
     }
@@ -68,9 +68,9 @@ public class LambdaTest extends BaseTest {
     @Step("Test 2 task")
     public void task2Test() {
         assertNotNull(lambdaPage.getTasks().get(1));
-        Assertions.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        Assert.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
         lambdaPage.logAndClick(lambdaPage.getTasks().get(1).findElement(By.tagName("input")));
-        Assertions.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
+        Assert.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
 
         countTaskTextTest();
     }
@@ -79,9 +79,9 @@ public class LambdaTest extends BaseTest {
     @Step("Test 3 task")
     public void task3Test() {
         assertNotNull(lambdaPage.getTasks().get(2));
-        Assertions.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        Assert.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
         lambdaPage.logAndClick(lambdaPage.getTasks().get(2).findElement(By.tagName("input")));
-        Assertions.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
+        Assert.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
 
         countTaskTextTest();
     }
@@ -90,9 +90,9 @@ public class LambdaTest extends BaseTest {
     @Step("Test 4 task")
     public void task4Test() {
         assertNotNull(lambdaPage.getTasks().get(3));
-        Assertions.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        Assert.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
         lambdaPage.logAndClick(lambdaPage.getTasks().get(3).findElement(By.tagName("input")));
-        Assertions.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
+        Assert.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
 
         countTaskTextTest();
     }
@@ -101,9 +101,9 @@ public class LambdaTest extends BaseTest {
     @Step("Test 5 task")
     public void task5Test() {
         assertNotNull(lambdaPage.getTasks().get(4));
-        Assertions.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        Assert.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
         lambdaPage.logAndClick(lambdaPage.getTasks().get(4).findElement(By.tagName("input")));
-        Assertions.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
+        Assert.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
 
         countTaskTextTest();
     }
