@@ -41,16 +41,19 @@ public class MosPolytechTest extends BaseTest {
     @Step("button Schedule Test")
     @Test
     public void buttonScheduleTest() throws InterruptedException {
-        assertNotNull(mosPolytechPage.getButtonMenu());
-        assertNotNull(mosPolytechPage.getButtonSchedule());
-        assertNotNull(mosPolytechPage.getButtonForStudents());
+        try {
+            assertNotNull(mosPolytechPage.getButtonSchedule());
+        }catch (AssertionError e){
+            Assert.fail();
+            return;
+        }
 
         mosPolytechPage.openScheduleTab();
         logger.info("Go to a new tab " + driver.getCurrentUrl());
 
         mosPolytechPage.openScheduleInNewWindow();
         mosPolytechPage.switchToNewWindow();
-        assertEquals(driver.getCurrentUrl(),"https://rasp.dmami.ru/session");
+        assertEquals(driver.getCurrentUrl(), "https://rasp.dmami.ru/session");
 
         logger.info("Go to a new window " + driver.getCurrentUrl());
 
@@ -61,13 +64,10 @@ public class MosPolytechTest extends BaseTest {
     public void testStudentSchedule() throws InterruptedException {
         buttonScheduleTest();
 
-
-
         SchedulePage schedulePage = new SchedulePage();
         schedulePage.inputGroupInTextHolder();
 
-
-        Assertions.assertTrue( schedulePage.isCurrentDayHighlighted(), "Current day is not highlighted in the schedule");
+        Assertions.assertTrue(schedulePage.isCurrentDayHighlighted(), "Current day is not highlighted in the schedule");
 
     }
 

@@ -5,6 +5,7 @@ import io.qameta.allure.Allure;
 import lambda.test.LambdaTest;
 import mosPolytech.page.MosPolytechPage;
 import mosPolytech.page.SchedulePage;
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
@@ -27,11 +28,16 @@ public class YandexMarketTest extends BaseTest {
             yandexMarketPage = new YandexMarketPage();
         });
     }
+
     @Test
     public void sortHardDiskDescendingTest() throws InterruptedException {
-        assertNotNull(yandexMarketPage.getButtonCatalog());
-        assertNotNull(yandexMarketPage.getButtonLaptopsAndComputers());
-        assertNotNull(yandexMarketPage.getButtonHardDisk());
+        try {
+            assertNotNull(yandexMarketPage.getButtonCatalog());
+            assertNotNull(yandexMarketPage.getButtonLaptopsAndComputers());
+            assertNotNull(yandexMarketPage.getButtonHardDisk());
+        }catch (AssertionError e){
+            Assert.fail();
+        }
         yandexMarketPage.openCatalog();
         yandexMarketPage.openHardDiskPartition();
 

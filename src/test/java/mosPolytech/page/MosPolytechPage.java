@@ -10,16 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MosPolytechPage extends BasePage {
     @Getter
-    @FindBy(xpath = "//button[@class = 'hamburger']")
-    WebElement buttonMenu;
-
-    @Getter
-    @FindBy(xpath = "/html/body/header/nav/div[2]/div/ul[1]/li[2]/ul/li[3]/a")
+    @FindBy(xpath = "//a[@href='/obuchauschimsya/raspisaniya/']//i[@class='icon is-large']")
     WebElement buttonSchedule;
-
-    @Getter
-    @FindBy(xpath = "/html/body/header/nav/div[2]/div/ul[1]/li[2]/a")
-    WebElement buttonForStudents;
 
     @Getter
     @FindBy(xpath = "//a[@href='https://rasp.dmami.ru/session']")
@@ -27,22 +19,15 @@ public class MosPolytechPage extends BasePage {
 
     public MosPolytechPage() {
         driver.get("https://mospolytech.ru/ ");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-    public void openScheduleTab(){
-        logAndClick(buttonMenu);
-        waitToClickable(buttonForStudents);
-        moveToElement(buttonForStudents);
+    public void openScheduleTab() {
         logAndClick(buttonSchedule);
     }
 
-    public void openScheduleInNewWindow(){
+    public void openScheduleInNewWindow() {
         moveToElement(buttonSeeScheduleOnWebsite);
         logAndClick(buttonSeeScheduleOnWebsite);
     }
-//    //*[@id="bx_3777608605_2854"]/div[3]/div/div[1]/a
-    //a[@title = "Обучающимся" ]
-    //a[@title = "Расписания"] && class="main-nav__item-link"
-    //<a href="/obuchauschimsya/raspisaniya/" class="main-nav__item-link active" title="Расписания" target="_self">Расписания</a>
 }

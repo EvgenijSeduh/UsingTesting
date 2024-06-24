@@ -20,7 +20,7 @@ public class SchedulePage extends BasePage {
     private WebElement buttonSeeScheduleOnWebsite;
 
     @Getter
-    @FindBy(xpath = "/html/body/div/div[1]/div[1]/div[3]/input[1]")
+    @FindBy(xpath = "//input[@class='groups']")
     private WebElement groupInput;
 
     @Getter

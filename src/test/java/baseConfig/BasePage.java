@@ -58,5 +58,9 @@ abstract public class BasePage {
     public void waitToClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+    public void waitToVisible(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        logger.info("Element visible:" + element);
+    }
 
 }

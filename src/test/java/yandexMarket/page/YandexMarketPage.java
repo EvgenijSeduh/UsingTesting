@@ -15,7 +15,7 @@ import java.util.List;
 
 public class YandexMarketPage extends BasePage {
     @Getter
-    @FindBy(xpath = "/html/body/div[1]/div/div[2]/div[2]/div/header/div[1]/div/div/noindex[1]/div/div/button")
+    @FindBy(xpath = "//button[@class=\"_30-fz button-focus-ring Hkr1q _1pHod _2rdh3 _3rbM-\"]")
     private WebElement buttonCatalog;
 
     @Getter
@@ -47,9 +47,9 @@ public class YandexMarketPage extends BasePage {
     }
 
     public void openHardDiskPartition(){
-        getWait().until(ExpectedConditions.elementToBeClickable(buttonLaptopsAndComputers));
+        waitToClickable(buttonLaptopsAndComputers);
         moveToElement(buttonLaptopsAndComputers);
-        getWait().until(ExpectedConditions.elementToBeClickable(buttonHardDisk));
+        waitToClickable(buttonHardDisk);
         logAndClick(buttonHardDisk);
     }
 
