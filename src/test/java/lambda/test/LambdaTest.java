@@ -3,7 +3,9 @@ package lambda.test;
 import baseConfig.BaseTest;
 import baseConfig.TestListener;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import lambda.ParseInt;
 import lambda.page.LambdaPage;
 import org.junit.Assert;
@@ -38,7 +40,8 @@ public class LambdaTest extends BaseTest {
 
 
     @Test
-    @Step("Checking that there are no crossed-out tasks")
+    @DisplayName("Checking that there are no crossed-out tasks")
+    @Feature("Correctness of the text")
     public void countTaskTextTest() {
         int count = 0;
         if (lambdaPage.getTasks().get(0) == null)
@@ -53,7 +56,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test 1 task")
+    @DisplayName("Test 1 task")
+    @Feature("Reaction to clicks")
     public void task1Test() {
         assertNotNull(lambdaPage.getTasks().get(0));
         Assert.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
@@ -65,7 +69,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test 2 task")
+    @DisplayName("Test 2 task")
+    @Feature("Reaction to clicks")
     public void task2Test() {
         assertNotNull(lambdaPage.getTasks().get(1));
         Assert.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
@@ -76,7 +81,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test 3 task")
+    @DisplayName("Test 3 task")
+    @Feature("Reaction to clicks")
     public void task3Test() {
         assertNotNull(lambdaPage.getTasks().get(2));
         Assert.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
@@ -87,7 +93,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test 4 task")
+    @DisplayName("Test 4 task")
+    @Feature("Reaction to clicks")
     public void task4Test() {
         assertNotNull(lambdaPage.getTasks().get(3));
         Assert.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
@@ -98,7 +105,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test 5 task")
+    @DisplayName("Test 5 task")
+    @Feature("Reaction to clicks")
     public void task5Test() {
         assertNotNull(lambdaPage.getTasks().get(4));
         Assert.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
@@ -109,7 +117,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Create new task")
+    @DisplayName("Create new task")
+    @Feature("Creating an Item")
     public void createNewTaskTest(){
         assertNotNull(lambdaPage.getNewTaskInput());
         lambdaPage.logAndClick(lambdaPage.getNewTaskInput());
@@ -121,7 +130,8 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @Step("Test inscription Title")
+    @DisplayName("Test inscription Title")
+    @Feature("Correctness of the text")
     public void startInscriptionTitle(){
         assertEquals(lambdaPage.getTitle().getText(),"5 of " + lambdaPage.getTasks().size() + " remaining");
     }

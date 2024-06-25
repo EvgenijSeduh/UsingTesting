@@ -2,7 +2,9 @@ package mosPolytech.test;
 
 import baseConfig.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import mosPolytech.page.MosPolytechPage;
 import mosPolytech.page.SchedulePage;
 import org.junit.Assert;
@@ -27,15 +29,12 @@ public class MosPolytechTest extends BaseTest {
         });
     }
 
-    @Step("button Schedule Test")
     @Test
+    @DisplayName("Button Schedule Test")
+    @Feature("Navigate to another page")
     public void buttonScheduleTest() throws InterruptedException {
-        try {
-            assertNotNull(mosPolytechPage.getButtonSchedule());
-        }catch (AssertionError e){
-            Assert.fail();
-            return;
-        }
+
+        assertNotNull(mosPolytechPage.getButtonSchedule());
 
         mosPolytechPage.openScheduleTab();
         logger.info("Go to a new tab " + driver.getCurrentUrl());
@@ -50,6 +49,8 @@ public class MosPolytechTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Date test from schedule")
+    @Feature("Date Verification")
     public void testStudentSchedule() throws InterruptedException {
         buttonScheduleTest();
 

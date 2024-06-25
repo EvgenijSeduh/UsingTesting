@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="All task done&#10;fixed xpath&#10;add some logg">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ee96fbfe-263d-4f25-88e0-94382427feaf" name="Changes" comment="remove jupiter&#10;remove unused methods&#10;fix TestLisener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/individ/evgenij/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/individ/evgenij/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseConfig/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/page/LambdaPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lambda/test/LambdaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/MosPolytechPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/page/SchedulePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mosPolytech/test/MosPolytechTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/page/MuseumPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/museum/test/MuseumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/yandexMarket/page/YandexMarketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/yandexMarket/page/YandexMarketPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/yandexMarket/test/YandexMarketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/yandexMarket/test/YandexMarketTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +58,7 @@
     "JUnit.MosPolytechTest.testStudentSchedule.executor": "Run",
     "JUnit.MuseumTest.executor": "Run",
     "JUnit.MuseumTest.exhibitionsRelevant.executor": "Run",
+    "JUnit.MuseumTest.fileReportTest.executor": "Run",
     "JUnit.MuseumTest.test.executor": "Run",
     "JUnit.Test1.executor": "Run",
     "JUnit.Test1.testGetUsers.executor": "Run",
@@ -79,6 +68,7 @@
     "Maven.UnitTesting [clean,test].executor": "Run",
     "Maven.UnitTesting [clean].executor": "Run",
     "Maven.UnitTesting [io.qameta.allure:allure-maven:2.10.0:report].executor": "Run",
+    "Maven.UnitTesting [io.qameta.allure:allure-maven:2.10.0:serve].executor": "Run",
     "Maven.Unit_Testing [allure:install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -89,7 +79,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
@@ -306,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719212495504</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="remove jupiter&#10;remove unused methods&#10;fix TestLisener">
+      <option name="closed" value="true" />
+      <created>1719243924943</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719243924943</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +330,7 @@
     <MESSAGE value="3 task 4/4 + log" />
     <MESSAGE value="2 task Made it more suitable for patern PO" />
     <MESSAGE value="All task done&#10;fixed xpath&#10;add some logg" />
-    <option name="LAST_COMMIT_MESSAGE" value="All task done&#10;fixed xpath&#10;add some logg" />
+    <MESSAGE value="remove jupiter&#10;remove unused methods&#10;fix TestLisener" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove jupiter&#10;remove unused methods&#10;fix TestLisener" />
   </component>
 </project>

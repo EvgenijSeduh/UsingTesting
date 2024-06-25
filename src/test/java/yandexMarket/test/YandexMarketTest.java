@@ -2,6 +2,8 @@ package yandexMarket.test;
 
 import baseConfig.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +28,8 @@ public class YandexMarketTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Testing the Sorting of Hard Drives in Descending Order")
+    @Feature("Checking the sorting work")
     public void sortHardDiskDescendingTest() throws InterruptedException {
         try {
             assertNotNull(yandexMarketPage.getButtonCatalog());

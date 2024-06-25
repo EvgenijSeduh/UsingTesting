@@ -2,6 +2,8 @@ package museum.test;
 
 import baseConfig.BaseTest;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import museum.page.MuseumPage;
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,6 +26,8 @@ public class MuseumTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Testing the relevance of the highlighted events")
+    @Feature("Date Verification")
     public void exhibitionsRelevantTest(){
         museumPage.openExhibition();
         for(WebElement i: museumPage.getExhibitionList()){
@@ -36,6 +40,8 @@ public class MuseumTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Testing number telephone in tab 'How to reach us'")
+    @Feature("Correctness of the text")
     public void numberTelephoneTest(){
         museumPage.openHowToReachUs();
         Assert.assertNotNull(museumPage.getTextWithTel());
@@ -46,6 +52,8 @@ public class MuseumTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Testing Report Availability")
+    @Feature("Checking the Presence of a File")
     public void fileReportTest(){
         museumPage.openAnnualReports();
         museumPage.openReport();
