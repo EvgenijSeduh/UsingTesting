@@ -138,7 +138,7 @@
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                            <value>baseConfig.TestListener</value>
                         </property>
                     </properties>
                     <systemPropertyVariables>

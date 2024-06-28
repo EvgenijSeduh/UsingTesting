@@ -1,13 +1,17 @@
 package lambda.page;
 
 import baseConfig.BasePage;
+import io.qameta.allure.Step;
 import lombok.Getter;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+
+import static org.junit.Assert.assertNotNull;
 
 public class LambdaPage extends BasePage {
     @Getter
@@ -35,8 +39,17 @@ public class LambdaPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Update tasks list")
     public List<WebElement> updateTasks(){
         return driver.findElements(By.xpath("//li[@class = 'ng-scope']"));
+    }
+
+    @Step("Click test")
+    public void clickTask(WebElement task) {
+        assertNotNull(task);
+        Assert.assertTrue(task.findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
+        logAndClick(task.findElement(By.tagName("input")));
+        Assert.assertTrue(task.findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
     }
 
 

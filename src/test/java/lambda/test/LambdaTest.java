@@ -37,15 +37,15 @@ public class LambdaTest extends BaseTest {
         currentNumberActiveTasks = lambdaPage.getTasks().size();
     }
 
-
-
     @Test
     @DisplayName("Checking that there are no crossed-out tasks")
     @Feature("Correctness of the text")
     public void countTaskTextTest() {
         int count = 0;
-        if (lambdaPage.getTasks().get(0) == null)
+        if (lambdaPage.getTasks().get(0) == null) {
+            Assert.fail();
             return;
+        }
         for (WebElement i : lambdaPage.getTasks()) {
             if (i.findElement(By.tagName("span")).getAttribute("class").contains("done-true")) {
                 count++;
@@ -56,64 +56,13 @@ public class LambdaTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Test 1 task")
+    @DisplayName("Test tasks")
     @Feature("Reaction to clicks")
-    public void task1Test() {
-        assertNotNull(lambdaPage.getTasks().get(0));
-        Assert.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
-        lambdaPage.waitToClickable(lambdaPage.getTasks().get(0).findElement(By.tagName("input")));
-        lambdaPage.logAndClick(lambdaPage.getTasks().get(0).findElement(By.tagName("input")));
-        Assert.assertTrue(lambdaPage.getTasks().get(0).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
-
-        countTaskTextTest();
-    }
-
-    @Test
-    @DisplayName("Test 2 task")
-    @Feature("Reaction to clicks")
-    public void task2Test() {
-        assertNotNull(lambdaPage.getTasks().get(1));
-        Assert.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
-        lambdaPage.logAndClick(lambdaPage.getTasks().get(1).findElement(By.tagName("input")));
-        Assert.assertTrue(lambdaPage.getTasks().get(1).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
-
-        countTaskTextTest();
-    }
-
-    @Test
-    @DisplayName("Test 3 task")
-    @Feature("Reaction to clicks")
-    public void task3Test() {
-        assertNotNull(lambdaPage.getTasks().get(2));
-        Assert.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
-        lambdaPage.logAndClick(lambdaPage.getTasks().get(2).findElement(By.tagName("input")));
-        Assert.assertTrue(lambdaPage.getTasks().get(2).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
-
-        countTaskTextTest();
-    }
-
-    @Test
-    @DisplayName("Test 4 task")
-    @Feature("Reaction to clicks")
-    public void task4Test() {
-        assertNotNull(lambdaPage.getTasks().get(3));
-        Assert.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
-        lambdaPage.logAndClick(lambdaPage.getTasks().get(3).findElement(By.tagName("input")));
-        Assert.assertTrue(lambdaPage.getTasks().get(3).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
-
-        countTaskTextTest();
-    }
-
-    @Test
-    @DisplayName("Test 5 task")
-    @Feature("Reaction to clicks")
-    public void task5Test() {
-        assertNotNull(lambdaPage.getTasks().get(4));
-        Assert.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-false"));
-        lambdaPage.logAndClick(lambdaPage.getTasks().get(4).findElement(By.tagName("input")));
-        Assert.assertTrue(lambdaPage.getTasks().get(4).findElement(By.tagName("span")).getAttribute("class").contains("done-true"));
-
-        countTaskTextTest();
+    public void taskTest() {
+        for (WebElement i: lambdaPage.getTasks()){
+            lambdaPage.clickTask(i);
+            countTaskTextTest();
+        }
     }
 
     @Test
@@ -126,7 +75,7 @@ public class LambdaTest extends BaseTest {
         assertNotNull(lambdaPage.getNewTaskButton());
         lambdaPage.logAndClick(lambdaPage.getNewTaskButton());
         lambdaPage.updateTasks();
-        assertNotNull(lambdaPage.getTasks().get(5));
+        assertNotNull(lambdaPage.getTasks().get(lambdaPage.getTasks().size()-1));
     }
 
     @Test
